@@ -11,5 +11,11 @@ var generateUnderscore = ( ) => {
     }
     return Underscores;
 }
-
 console.log(generateUnderscore());
+
+document.onkeyup = function(event) {
+    console.log(event);
+    
+    var keycode = event.keyCode;
+    console.log(keycode);
+}
