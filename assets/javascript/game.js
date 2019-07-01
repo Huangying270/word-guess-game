@@ -8,6 +8,10 @@ var rightLetter = [];
 var wrongLetter = [];
 var Underscores = [];
 
+var pokeUnderScores = document.getElementsByClassName("underscore");
+
+
+
 var generateUnderscore = ( ) => {
     for (var i = 0; i < PokemonChoice.length; i++) {
         Underscores.push("_");
@@ -30,6 +34,8 @@ document.onkeyup = function(event) {
         Underscores[PokemonChoice.indexOf(keyword)] = keyword;
         console.log(Underscores);
 
+        pokeUnderScores.innerHTML = Underscores.join(" ");
+
         if(Underscores.join("") == PokemonChoice) {
             alert("You Win!");
         }
@@ -39,3 +45,6 @@ document.onkeyup = function(event) {
         console.log(wrongLetter);
     }
 }
+
+generateUnderscore().join(" ");
+Underscores[0].innerHTML = "working";
