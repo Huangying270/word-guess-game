@@ -25,7 +25,7 @@ document.onkeyup = function(event) {
     var keyword = String.fromCharCode(event.keyCode);
     console.log(PokemonChoice.indexOf(keyword));
 
-    if(keyword.indexOf(PokemonChoice) > -1) {
+    if(PokemonChoice.indexOf(keyword) > -1) {
 
         rightLetter.push(keyword);
         console.log(rightLetter);
@@ -34,17 +34,17 @@ document.onkeyup = function(event) {
         Underscores[PokemonChoice.indexOf(keyword)] = keyword;
         console.log(Underscores);
 
-        pokeUnderScores.innerHTML = Underscores.join(" ");
+        pokeUnderScores.innerHTML = Underscores.join("_");
 
         if(Underscores.join("") == PokemonChoice) {
             alert("You Win!");
         }
 
     } else {
+        console.log("wrong guess");
         wrongLetter.push(keyword);
         console.log(wrongLetter);
     }
 }
 
-generateUnderscore().join(" ");
-Underscores[0].innerHTML = "working";
+Underscores[0].innerHTML = generateUnderscore().join(" ");
