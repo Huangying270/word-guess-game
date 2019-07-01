@@ -8,7 +8,7 @@ var rightLetter = [];
 var wrongLetter = [];
 var Underscores = [];
 
-var pokeUnderScores = document.getElementsByClassName("underscore");
+var pokeUnderScores = document.getElementById("underscore").textContent;
 
 
 
