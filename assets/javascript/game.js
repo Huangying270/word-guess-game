@@ -25,6 +25,9 @@ document.onkeyup = function(event) {
     var keyword = String.fromCharCode(event.keyCode);
     console.log(PokemonChoice.indexOf(keyword));
 
+    //var keyword = String.toLowerCase(event.keyCode);
+    //console.log(keyword);
+
     if(PokemonChoice.indexOf(keyword) > -1) {
 
         rightLetter.push(keyword);
@@ -47,4 +50,4 @@ document.onkeyup = function(event) {
     }
 }
 
-Underscores[0].innerHTML = generateUnderscore().join(" ");
+//Underscores[0].innerHTML = generateUnderscore().join(" ");
