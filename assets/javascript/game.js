@@ -8,13 +8,13 @@ var rightLetter = [];
 var wrongLetter = [];
 var Underscores = [];
 
-var pokeUnderScores = document.getElementById("underscore").textContent;
-
+var pokeUnderScores = document.getElementById("underscore");
+console.log(pokeUnderScores);
 
 
 var generateUnderscore = ( ) => {
     for (var i = 0; i < PokemonChoice.length; i++) {
-        Underscores.push("_");
+        Underscores.push(" _ ");
     }
     return Underscores;
 }
@@ -28,6 +28,7 @@ document.onkeyup = function(event) {
     //var keyword = String.toLowerCase(event.keyCode);
     //console.log(keyword);
 
+    //if(PokemonChoice.indexOf(keyword) = 0, indexOf(keyword) < PokemonChoice.length, indexOf(keyword)++) {
     if(PokemonChoice.indexOf(keyword) > -1) {
 
         rightLetter.push(keyword);
